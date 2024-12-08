@@ -8,6 +8,41 @@ body, html {
     margin: 0;
     width: 100%;
     height: 100%;
+    background-color: #333;
+}
+
+header{
+   width: 100%;
+   background: rgba(0, 0, 0, 0.6);
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 10;
+   padding: 10px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-container button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.nav-container button:hover {
+    color: var(--primary-color);
+}
+
+.nav-container .active {
+    color: var(--primary-color);
 }
 
 h1,
@@ -47,7 +82,7 @@ label {
 }
 
 .card:hover {
-    transform: translate(-10px);
+    transform: translateY(-10px);
 }
 
 .contact-form {
@@ -108,6 +143,7 @@ label {
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding: 100px;
 }
 
 .home-container {
@@ -117,6 +153,7 @@ label {
     transform: translate(-50%, -50%);
     text-align: center;
     color: var(--primary-color);
+    margin-top: 100px;
 }
 
 .home-container h1 {
