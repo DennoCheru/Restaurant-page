@@ -3,18 +3,19 @@ import bgImage from './images/bg.png';
 function createHomePage() {
     const content = document.getElementById('content');
 
+    const homeContainer = document.createElement('div');
+    homeContainer.classList.add('home-container');
+
     const headline = document.createElement('h1');
-    headline.textContent = "Welcome to Our Restaurant";
+    headline.textContent = 'Welcome to our Restaurant!';
 
-    const image = document.createElement('img');
-    image.src = bgImage;
+    const subheading = document.createElement('h2');
+    subheading.textContent = 'Your tastebud\'s favourite choice!'
 
-    const description = document.createElement('p');
-    description.textContent = "We serve the best food in town! Come and enjoy our delicious meals!";
+    homeContainer.appendChild(headline);
+    homeContainer.appendChild(subheading);
 
-    content.appendChild(headline);
-    content.appendChild(image);
-    content.appendChild(description);
+    content.appendChild(homeContainer);
 }
 
 export { createHomePage };
